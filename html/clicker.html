@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Click Speed Game</title>
+
+    <style>
+        body {
+            background: radial-gradient(circle, #0f0f0f, black);
+            color: white;
+            text-align: center;
+            font-family: 'Segoe UI';
+        }
+
+        .container {
+            margin-top: 100px;
+        }
+
+        button {
+            padding: 20px 40px;
+            font-size: 20px;
+            background: linear-gradient(45deg, orange, gold);
+            border: none;
+            border-radius: 20px;
+            cursor: pointer;
+        }
+
+        button:hover {
+            transform: scale(1.1);
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="container">
+        <h1>⚡ Click Speed Game</h1>
+        <h2>Time: <span id="time">10</span></h2>
+        <h2>Score: <span id="score">0</span></h2>
+
+        <button onclick="clickGame()">CLICK FAST!</button>
+        <br><br>
+        <a href="index.html">⬅ Back</a>
+    </div>
+
+    <script>
+        let score = 0;
+        let time = 10;
+        let active = true;
+
+        let timer = setInterval(() => {
+            time--;
+            document.getElementById("time").innerText = time;
+
+            if (time === 0) {
+                clearInterval(timer);
+                active = false;
+                alert("Time Up! Score: " + score);
+            }
+        }, 1000);
+
+        function clickGame() {
+            if (!active) return;
+            score++;
+            document.getElementById("score").innerText = score;
+        }
+    </script>
+
+</body>
+
+</html>

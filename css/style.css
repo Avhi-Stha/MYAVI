@@ -1,0 +1,147 @@
+/* Reset */
+body {
+  margin: 0;
+  font-family: 'Poppins', sans-serif;
+  background: radial-gradient(circle at top, #0a0a0a, #000);
+  color: white;
+  overflow-x: hidden;
+}
+
+/* Header */
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px 60px;
+}
+
+.logo {
+  font-size: 24px;
+  font-weight: 600;
+}
+
+/* Nav */
+nav a {
+  margin: 0 20px;
+  text-decoration: none;
+  color: #ccc;
+  transition: 0.3s;
+}
+
+nav a:hover {
+  color: orange;
+}
+
+/* Button */
+.btn {
+  background: linear-gradient(45deg, orange, gold);
+  border: none;
+  padding: 10px 25px;
+  border-radius: 25px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.btn:hover {
+  transform: scale(1.1);
+  box-shadow: 0 0 15px orange;
+}
+
+/* Hero */
+.hero {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 100px 80px;
+}
+
+/* Text */
+.hero h3 {
+  color: #aaa;
+  font-weight: 300;
+}
+
+.hero h1 {
+  font-size: 75px;
+  margin: 10px 0;
+
+  background: linear-gradient(to right, white, orange);
+
+  background-clip: text;
+  -webkit-background-clip: text;
+
+  color: transparent;
+  -webkit-text-fill-color: transparent;
+}
+
+/* Paragraph */
+.hero p {
+  color: #ccc;
+  margin-top: 10px;
+}
+
+/* Astronaut */
+.hero img {
+  width: 380px;
+  animation: float 4s ease-in-out infinite;
+
+}
+
+/* Floating animation */
+@keyframes float {
+  0% {
+    transform: translateY(0);
+  }
+
+  50% {
+    transform: translateY(-20px);
+  }
+
+  100% {
+    transform: translateY(0);
+  }
+}
+
+/* Games Section */
+.games {
+  padding: 80px 20px;
+  text-align: center;
+}
+
+.games h2 {
+  font-size: 32px;
+  margin-bottom: 40px;
+}
+
+/* Cards */
+.cards {
+  display: flex;
+  justify-content: center;
+  gap: 40px;
+  flex-wrap: wrap;
+}
+
+/* Card Design */
+.card {
+  padding: 25px 50px;
+  border-radius: 20px;
+  text-decoration: none;
+  color: white;
+  font-size: 18px;
+
+  background: rgba(255, 255, 255, 0.05);
+  backdrop-filter: blur(10px);
+
+  border: 1px solid rgba(255, 255, 255, 0.1);
+
+  transition: 0.3s;
+}
+
+/* Hover Effect */
+.card:hover {
+  transform: translateY(-10px) scale(1.05);
+  background: linear-gradient(45deg, orange, gold);
+  color: black;
+  box-shadow: 0 0 25px orange;
+}

@@ -1,0 +1,72 @@
+body {
+  margin: 0;
+  background: radial-gradient(circle, #0f0f0f, black);
+  color: white;
+  font-family: 'Segoe UI';
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+.game-container {
+  padding: 30px;
+  border-radius: 20px;
+  background: rgba(255, 255, 255, 0.05);
+  backdrop-filter: blur(10px);
+  text-align: center;
+}
+
+canvas {
+  border: 2px solid orange;
+  border-radius: 10px;
+  box-shadow: 0 0 20px orange;
+  background: #111;
+}
+
+button {
+  margin-top: 15px;
+  padding: 10px 25px;
+  border: none;
+  background: orange;
+  border-radius: 20px;
+  cursor: pointer;
+}
+
+a {
+  display: block;
+  margin-top: 10px;
+  color: white;
+}
+
+/* Controls at bottom */
+.controls {
+  position: fixed;
+  bottom: 20px;
+  left: 50%;
+  transform: translateX(-50%);
+
+  display: flex;
+  gap: 20px;
+}
+
+/* Button styling */
+.controls button,
+.controls a {
+  padding: 10px 25px;
+  border-radius: 20px;
+  border: none;
+  background: linear-gradient(45deg, orange, gold);
+  color: black;
+  font-weight: bold;
+  text-decoration: none;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+/* Hover */
+.controls button:hover,
+.controls a:hover {
+  transform: scale(1.1);
+  box-shadow: 0 0 15px orange;
+}
